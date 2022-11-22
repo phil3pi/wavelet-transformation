@@ -15,5 +15,15 @@ function [morlet_wavelet,time] = generate_morlet_wavelet(fw,fs,w_size,mu,s)
     gaussian = exp( (-(time-mu).^2) ./ (2*s^2) );
     
     morlet_wavelet = sine .* gaussian;
+
+    figure('Name','wavelet generation plot'), clf
+    subplot(2,1,1);
+    plot(time,real(morlet_wavelet))
+    xlabel('time [s]'), ylabel('Amplitude')
+    title([ 'Real part of wavelet at ' num2str(fw) ' Hz' ])
+    subplot(2,1,2);
+    plot(time,imag(morlet_wavelet))
+    xlabel('time [s]'), ylabel('Amplitude')
+    title([ 'Imaginary part of wavelet at ' num2str(fw) ' Hz' ])
 end
 

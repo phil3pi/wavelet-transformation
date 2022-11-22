@@ -35,3 +35,5 @@ codegen/
 octave-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/matlab
+
+DATAall_cleaneog_A01T_Fs250.mat
